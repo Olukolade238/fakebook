@@ -4,7 +4,7 @@ import { createPost } from "./post.js";
 
 const textArea = document.getElementById("text");
 const imgUpload = document.getElementById("imgUpload");
-const postBtn = document.getElementById("postBtn");
+const postButton = document.getElementById("postBtn");
 const postsContainer = document.getElementById("postsContainer");
 const profileBtn = document.getElementById("profileBtn");
 const modal = document.getElementById("modal");
@@ -38,7 +38,7 @@ closeModal.addEventListener("click", () => {
     modal.classList.add("hidden");
 });
 
-postBtn.addEventListener("click", () => {
+postButton.addEventListener("click", () => {
     const text = textArea.value.trim();
     const file = imgUpload.files[0];
         if (!text && !file) {
