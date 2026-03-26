@@ -27,5 +27,21 @@
                     <img src="./asset/media/My Profile Picture.jpeg" class="profileIcon" id="profileBtn">
             </header>
         </div>
+        <main>
+            <div class="container">
+                <div class="postForm">
+                    <textarea id="postArea" placeholder="What's new, Kay?"></textarea>
+                    <div class="postCntrl">
+                        <div class="fileIndicator">
+                            <label for="imgUpload"><i class="fa-regular fa-camera"></i></label>
+                            <input type="file" id="imgUpload" hidden>
+                            <span id="fileName"></span>
+                        </div>
+                        <button id="postBtn">Post</button>
+                    </div>
+                </div>
+                <section id="postsContainer"></section>
+            </div>
+        </main>
     </body>
 </html>
