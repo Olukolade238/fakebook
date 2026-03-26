@@ -15,7 +15,7 @@ const fileName = document.getElementById("fileName");
 
 imgUpload.addEventListener("change", () => {
     if (imgUpload.files.length > 0) {
-        fileName.textContent = imageUpload.files[0].name;
+        fileName.textContent = imgUpload.files[0].name;
     }
 });
 
@@ -30,7 +30,7 @@ const user = new Subscriber(
 );
 
 profileBtn.addEventListener("click", () => {
-    accountInfo.textContent = user.getInfo();
+    accountInfo.innerHTML = user.getInfo();
     modal.classList.remove("hidden");
 });
 

@@ -125,6 +125,22 @@ textarea {
     padding: 25px;
     border-radius: 10px;
     width: 350px;
+    position: relative;
+}
+
+#closeModal {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    cursor:pointer;
+
+}
+
+#closeModal:hover {
+    color: #000;
 }
 
 .hidden {
@@ -150,4 +166,20 @@ textarea {
 .postDate {
     color: #777;
     font-size: 14px;
+}
+
+/* Profile Card */
+.profileCard{
+    text-align: center;
+}
+
+.profileCard img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.details{
+    margin-top: 10px;
 }

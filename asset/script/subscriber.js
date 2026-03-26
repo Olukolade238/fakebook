@@ -20,11 +20,10 @@ export class Subscriber extends User {
     get canMonetize() { return this.#canMonetize; }
 
     getInfo() {
-        let userInfo = super.getInfo();
         return `
         <div class="profileCard">
             <img src="./asset/media/My Profile Picture.jpeg" class="profileImage">
-            <h2>${userInfo}</h2>
+            <h2>${this.name}</h2>
             <p>${this.userName}</p>
             <div class="details">
                 <p>Email: ${this.email}</p>
