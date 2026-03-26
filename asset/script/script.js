@@ -20,7 +20,7 @@ imgUpload.addEventListener("change", () => {
 });
 
 const user = new Subscriber(
-    "1",
+    "00000131455",
     "Olukolade Kaka",
     "Kay",
     "olukoladekaka@gmail.com",

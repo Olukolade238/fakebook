@@ -136,3 +136,18 @@ textarea {
     align-items: center;
     gap: 10px;
 }
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.userName {
+    font-weight: bold;
+}
+
+.postDate {
+    color: #777;
+    font-size: 14px;
+}
