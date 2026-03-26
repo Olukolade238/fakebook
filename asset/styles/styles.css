@@ -1,13 +1,24 @@
 @import "./reset.css";
 
-.container {
-    width: min(100% - 100px, 1080px);
-    margin-inline: auto;
+/* Root Variables */
+:root {
+    --bg-main: #0a0f1c;
+    --bg-header: #1b2230;
+    --bg-card-dark: #1b212e;
+    --bg-white: #fff;
+    --text-light: #cfd6e6;
+    --text-muted: #777;
+    --text-dark: #111;
+    --primary: #3b8cff;
+    --primary-hover: #2c74d9;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0a0f1c;
+    background-color: var(--bg-main);
 }
 
 main {
@@ -15,16 +26,18 @@ main {
     margin: 50px auto;
 }
 
-body textarea {
-    color: #fff;
+.container {
+    width: min(100% - 100px, 1080px);
+    margin-inline: auto;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background-color: #1b2230;
+    background: var(--bg-header);
 }
 
 .logo {
@@ -39,27 +52,28 @@ nav ul {
     list-style: none;
 }
 
-nav li a {
-    text-decoration: none;
-    color: #cfd6e6;
+nav a {
     font-size: 15px;
+    color: var(--text-light);
+    text-decoration: none;
 }
 
-nav li a:hover {
+nav a:hover {
     color: #cac8f0;
 }
 
-.profileIcon {
+.profileIcon, .profileImage {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
 }
 
+/* Post Form */
 .postForm {
-    background-color: #1b212e;
+    background: var(--bg-card-dark);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
 }
 
 textarea {
@@ -68,6 +82,7 @@ textarea {
     background: transparent;
     border: none;
     font-size: 16px;
+    color: #fff;
 }
 
 .postCntrl {
@@ -77,29 +92,38 @@ textarea {
     margin-top: 15px;
 }
 
-.fileIndicator i {
-    font-size: 18px;
-    cursor: pointer;
-    color: #9aa4c3;
+.fileIndicator {
     display: flex;
     align-items: center;
     gap: 6px;
+    color: #9aa4c3;
+}
+
+.fileIndicator i {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#fileName {
+    font-size: 14px;
+    color: #fff;
 }
 
 #postBtn {
-    background: #3b8cff;
+    background: var(--primary);
     border: none;
     color: #fff;
     padding: 8px 18px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     font-weight: bold;
     cursor: pointer;
 }
 
 #postBtn:hover {
-    background: #2c74d9;
+    background: var(--primary-hover);
 }
 
+/* style for post.js */
 #postsContainer {
     margin-top: 25px;
     display: flex;
@@ -107,118 +131,13 @@ textarea {
     gap: 20px;
 }
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000099;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modalContent {
-    background-color: #fff;
-    color: #141414;
-    padding: 25px;
-    border-radius: 10px;
-    width: 350px;
-    position: relative;
-}
-
-#closeModal {
-    position: absolute;
-    top: 15px;
-    right: 18px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
-    cursor:pointer;
-
-}
-
-#closeModal:hover {
-    color: #000;
-}
-
-.hidden {
-    display: none;
-}
-
-.userInfo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.profileImage {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.userName {
-    font-weight: bold;
-}
-
-.postDate {
-    color: #777;
-    font-size: 14px;
-}
-
-/* Profile Card */
-.profileCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-}
-
-.profileCard h2 {
-    font-size: 18px;
-    margin: 5px 0;
-    font-weight: bold;
-}
-
-.profileCard p {
-    font-size: 14px;
-    color: #555;
-    margin: 0;
-}
-
-.profileCard .profileImage {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.details{
-    margin-top: 10px;
-}
-
-.profileCard .details {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #666;
-}
-
-.profileCard .details p {
-    margin: 4px 0;
-}
-
-/* style for post.js */
 .post {
-    background-color: #ffffff;
-    border-radius: 14px;
+    background: var(--bg-white);
     padding: 15px;
+    border-radius: var(--radius-lg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* OVERRIDE modal-centered profileCard INSIDE posts */
 .post .profileCard {
     display: flex;
     flex-direction: row;
@@ -229,42 +148,102 @@ textarea {
     width: 100%;
 }
 
-.post .userInfo {
+.userInfo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.post .userName {
-    color: #111;
+.userName {
     font-weight: bold;
+    color: var(--text-dark);
 }
 
-.post .postDate {
+.postDate {
     font-size: 13px;
-    color: #525050;
+    color: var(--text-muted);
     white-space: nowrap;
 }
 
+/* Post content */
 .postImage {
     width: 100%;
+    margin-top: 10px;
     border-radius: 12px;
-    margin-top: 10px;
-    display: block;
 }
 
-.postTextImage {
-    position: relative;
-    margin-top: 10px;
-}
-
-.postTextImage .postText {
-    background: rgba(0, 0, 0, 0.55);
-    padding: 10px 12px;
-    border-radius: 8px;
-    margin-top: 8px;
+.postText {
+    font-size: 15px;
 }
 
 .postTextOnly .postText {
-    color: #111;
+    color: var(--text-dark);
+}
+
+.postTextImage .postText {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 10px 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #00000099;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background: var(--bg-white);
+    padding: 25px;
+    width: 350px;
+    border-radius: var(--radius-md);
+    position: relative;
+    text-align: center;
+}
+
+#closeModal {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+#closeModal:hover {
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Profile card (MODAL) */
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileCard .profileImage {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.profileCard h2 {
+    font-size: 18px;
+}
+
+.profileCard p, .details {
+    font-size: 13px;
+    color: #666;
 }
