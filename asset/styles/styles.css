@@ -10,7 +10,7 @@ body {
     background-color: #0a0f1c;
 }
 
-body textarea {
+body textarea #postBtn{
     color: #fff;
 }
 
@@ -79,4 +79,24 @@ textarea {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+#postBtn {
+    background: #3b8cff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#postBtn:hover {
+    background: #2c74d9;
+}
+
+#postsContainer {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
