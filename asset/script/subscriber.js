@@ -22,7 +22,7 @@ export class Subscriber extends User {
     getInfo() {
         let userInfo = super.getInfo();
         return `
-        <div class="profile-card">
+        <div class="profileCard">
             <img src="./asset/media/My Profile Picture.jpeg" class="profileImage">
             <h2>${userInfo}</h2>
             <p>${this.userName}</p>
