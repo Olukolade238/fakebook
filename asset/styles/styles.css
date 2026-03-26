@@ -196,15 +196,6 @@ textarea {
     object-fit: cover;
 }
 
-.profileCard::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: #eee;
-    margin-top: 15px;
-}
-
 .details{
     margin-top: 10px;
 }
@@ -225,4 +216,55 @@ textarea {
     border-radius: 14px;
     padding: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* OVERRIDE modal-centered profileCard INSIDE posts */
+.post .profileCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 0;
+    width: 100%;
+}
+
+.post .userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post .userName {
+    color: #111;
+    font-weight: bold;
+}
+
+.post .postDate {
+    font-size: 13px;
+    color: #525050;
+    white-space: nowrap;
+}
+
+.postImage {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+    display: block;
+}
+
+.postTextImage {
+    position: relative;
+    margin-top: 10px;
+}
+
+.postTextImage .postText {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.postTextOnly .postText {
+    color: #111;
 }
