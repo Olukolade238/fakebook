@@ -24,8 +24,8 @@ const user = new Subscriber(
     "Olukolade Kaka",
     "Kay",
     "olukoladekaka@gmail.com",
-    ["Student","MITT"],
     ["Product Designer","Ecommerce Website"],
+    ["Student","MITT"],
     true
 );
 

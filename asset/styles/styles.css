@@ -170,16 +170,59 @@ textarea {
 
 /* Profile Card */
 .profileCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 10px;
 }
 
-.profileCard img{
-    width: 80px;
-    height: 80px;
+.profileCard h2 {
+    font-size: 18px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.profileCard p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.profileCard .profileImage {
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.profileCard::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    margin-top: 15px;
 }
 
 .details{
     margin-top: 10px;
+}
+
+.profileCard .details {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.profileCard .details p {
+    margin: 4px 0;
+}
+
+/* style for post.js */
+.post {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
