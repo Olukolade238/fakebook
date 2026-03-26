@@ -10,7 +10,12 @@ body {
     background-color: #0a0f1c;
 }
 
-body textarea #postBtn{
+main {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+body textarea {
     color: #fff;
 }
 
@@ -19,7 +24,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: #1b2230;
+    background-color: #1b2230;
 }
 
 .logo {
@@ -84,6 +89,7 @@ textarea {
 #postBtn {
     background: #3b8cff;
     border: none;
+    color: #fff;
     padding: 8px 18px;
     border-radius: 6px;
     font-weight: bold;
@@ -99,4 +105,34 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: #fff;
+    color: #141414;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.hidden {
+    display: none;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
