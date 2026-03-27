@@ -2,15 +2,15 @@
 import { Subscriber } from "./subscriber.js";
 import { createPost } from "./post.js";
 
-const textArea = document.getElementById("text");
-const imgUpload = document.getElementById("imgUpload");
-const postButton = document.getElementById("postBtn");
-const postsContainer = document.getElementById("postsContainer");
-const profileBtn = document.getElementById("profileBtn");
-const modal = document.getElementById("modal");
-const closeModal = document.getElementById("closeModal");
-const accountInfo = document.getElementById("accountInfo");
-const fileName = document.getElementById("fileName");
+const textArea = document.getElementById('text');
+const imgUpload = document.getElementById('imgUpload');
+const postButton = document.getElementById('postBtn');
+const postsContainer = document.getElementById('postsContainer');
+const profileBtn = document.getElementById('profileBtn');
+const modal = document.getElementById('modal');
+const closeModal = document.getElementById('closeModal');
+const accountInfo = document.getElementById('accountInfo');
+const fileName = document.getElementById('fileName');
 
 
 imgUpload.addEventListener("change", () => {
